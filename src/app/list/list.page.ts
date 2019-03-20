@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListPage implements OnInit {
 
+  list: any = [];
+  inputItem: any;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  addItem() {
+    this.list.push(this.inputItem);
+    this.inputItem = '';
   }
 
 }

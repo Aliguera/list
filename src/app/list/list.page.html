@@ -5,5 +5,17 @@
 </ion-header>
 
 <ion-content>
-
+  <ion-toolbar color="secondary">
+    <ion-input [(ngModel)]="inputItem"></ion-input>
+    <ion-buttons slot="end">
+      <ion-button slot="end" (click)="addItem()">Add</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-list *ngFor="let item of list">
+    <ion-item>
+      <ion-label>
+        {{ item }}
+      </ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
